@@ -1,0 +1,63 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.markdown-previewer {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+}
+
+.input-area {
+  flex: 1;
+  padding: 10px;
+  border-right: 1px solid #ccc;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  outline: none;
+  resize: none;
+}
+
+.preview-area {
+  flex: 1;
+  padding: 10px;
+  overflow-y: scroll;
+  background-color: #f9f9f9;
+  border-left: 1px solid #ccc;
+  color: black;
+}
+
+.button-container {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  margin-right: 30px;
+}
+
+.clear-button, .download-button {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.clear-button:hover, .download-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .markdown-previewer {
+    flex-direction: column;
+  }
+
+  .input-area, .preview-area {
+    height: 50vh;
+  }
+}
